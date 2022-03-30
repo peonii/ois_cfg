@@ -4,12 +4,12 @@ run: build
 
 build:
 	@qcpp main.qcpp main.cpp
-	@g++ main.cpp -o main
+	@g++ -O3 -static main.cpp -o main -std=c++17
 	@rm -f main.cpp
 
 debug:
 	@qcpp main.qcpp main.cpp 1
-	@g++ main.cpp -o main
+	@g++ -O3 -static main.cpp -o main -std=c++17
 	@rm -f main.cpp
 	@./main
 	@rm -f ./main
